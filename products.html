@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Nihal Ecommerce</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="header_part">
+        <h4 class="nav_line">
+          Free Shopping. 30-day return or refund guarantee.
+        </h4>
+        <div class="sign_btn">
+          <a href="#">SIGN IN</a>
+          <a href="#">SIGN UP</a>
+        </div>
+      </div>
+    </nav>
+    <div class="head_section">
+      <div class="logo">
+        <div class="logo_name">NIHAL</div>
+        <div class="logo_name_store">STORE</div>
+      </div>
+      <div class="page_cart">
+        <div class="page">
+          <a href="/">HOME</a>
+          <a href="about.html">ABOUT</a>
+          <a href="products.html">PRODUCTS</a>
+          <a href="contact.html">CONTACT</a>
+        </div>
+        <div class="cart">
+          <a href="addToCart.html">
+            <i class="fa-solid fa-cart-shopping cart_margin" href="addToCart.html"></i>
+           0</a
+          >
+        </div>
+      </div>
+    </div>
+    <main>
+      
+      <div class="item_section">
+        <div class="item_box">
+          <div class="item_detail">
+            <p>NEW YEAR SALE</p>
+            <h3>Get And Extra 50% Off</h3>
+            <a href="#">SHOP NOW</a>
+          </div>
+          <div class="item_img">
+            <img src="public/laptop_img.png" alt="" />
+          </div>
+        </div>
+
+        <div class="item_box">
+          <div class="item_detail">
+            <p>NEW YEAR SALE</p>
+            <h3>40% Discount On Speakers</h3>
+            <a href="#">SHOP NOW</a>
+          </div>
+          <div class="item_img">
+            <img src="public/airpods_img.png" alt="" />
+          </div>
+        </div>
+
+        <div class="item_box">
+          <div class="item_detail">
+            <p>NEW YEAR SALE</p>
+            <h3>Get And Extra 50% Off</h3>
+            <a href="#">SHOP NOW</a>
+          </div>
+          <div class="item_img">
+            <img src="public/iphone15pro_img.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="store_details">
+        <div class="sale_detail">
+          <div class="delivery_detail_icon">
+            <i class="fa-solid fa-truck-fast" style="color: #0b63a7"></i>
+          </div>
+          <div class="delivery_detail_text">
+            <p class="big_text">Worldwide Shipping</p>
+            <p>Order Above $100</p>
+          </div>
+        </div>
+        <div class="sale_detail">
+          <div class="delivery_detail_icon_hero">
+            <i
+              class="fa-solid fa-repeat delivery_detail_icon"
+              style="color: #0b63a7"
+            ></i>
+          </div>
+          <div class="delivery_detail_text">
+            <p class="big_text">Easy 30 Day Returns</p>
+            <p>Back Returns in 7 Days</p>
+          </div>
+        </div>
+        <div class="sale_detail">
+          <div class="delivery_detail_icon">
+            <i
+              class="fa-solid fa-hand-holding-dollar delivery_detail_icon"
+              style="color: #0b63a7"
+            ></i>
+          </div>
+          <div class="delivery_detail_text">
+            <p class="big_text">Money Back Guarantee</p>
+            <p>Guarantee With in 30-Days</p>
+          </div>
+        </div>
+        <div class="sale_detail">
+          <div class="delivery_detail_icon">
+            <i
+              class="fa-solid fa-headset delivery_detail_icon"
+              style="color: #0b63a7"
+            ></i>
+          </div>
+          <div class="delivery_detail_text">
+            <p class="big_text">Easy Online Support</p>
+            <p>24/7 Any Time Support</p>
+          </div>
+        </div>
+      </div>
+      <section class="section-products">
+        <div class="container">
+          <div class="section-common-heading">Checkout Nihal Store</div>
+        </div>
+        <section class="container">
+          <div id="productContainer"></div>
+        </section>
+      </section>
+
+      <template id="productTemplate">
+        <div class="cards" id="cardValue">
+          <article class="information [card]">
+            <span class="category"></span>
+            <div class="imageContainer">
+              <img class="productImage" src="" alt="" />
+            </div>
+            <h2 class="productName"></h2>
+            <div class="productRating">
+              <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+              <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+              <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+              <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+              <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+            </div>
+            <p class="productDescription"></p>
+            <div class="productPriceElement">
+              <p class="productPrice"></p>
+              <p class="productActualPrice"></p>
+            </div>
+            <div class="productStockElement">
+              <p class="productProperty">Total Stocks Availabe:</p>
+              <p class="productStock"></p>
+            </div>
+
+            <div class="productQuantityElement">
+              <p class="productProperty">Quantity(Pieces)</p>
+              <div class="stockElement">
+                <button class="cartIncrement">+</button>
+                <p class="productQuantity">1</p>
+                <button class="cartDecrement">-</button>
+              </div>
+            </div>
+
+            <button class="add-to-cart-button">
+              <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+            </button>
+          </article>
+        </div>
+      </template>
+    </main>
+    <footer>
+      <div class="footer_element">
+        <div class="logo_details">
+          <div class="footer_logo">
+            <div class="footer_logo_name">NIHAL</div>
+            <div class="footer_logo_name_store">STORE</div>
+          </div>
+          <p class="footer_p">
+            Welcome to Nihal EcomStore. your ultimate destination for
+            cutting-edge gadgets!
+          </p>
+        </div>
+        <div class="shopping_info">
+          <h3>SHOPPING</h3>
+          <p>Computer Store</p>
+          <p>Laptop Store</p>
+          <p>Accessories</p>
+          <p>Sales & Discount</p>
+        </div>
+
+        <div class="shopping_info">
+          <h3>Experience</h3>
+          <p>Contact Us</p>
+          <p>Payment Method</p>
+          <p>Delivery</p>
+          <p>Return and Exchange</p>
+        </div>
+
+        <div class="shopping_info">
+          <h3>NEWSLETTER</h3>
+          <p>Be the first to know about new <br />arrivals, sales & promos!</p>
+          <div class="f_mail">
+            <input type="email" placeholder="Your Email" />
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="desgin_owner">
+        <div class="desginer_name">
+          <p>Design and Code by Nihal</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
